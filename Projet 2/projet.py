@@ -73,7 +73,7 @@ def P2D_p(df,attr):
     return dict_att
 
 def nbParams(df,liste=None):
-    if(liste==None):
+    if liste==None:
         liste=df.columns
     n=len(liste)
     nb=1
@@ -312,7 +312,7 @@ class MAPNaiveBayesClassifier(APrioriClassifier):
 
     def estimClass(self,attrs):
         dic=self.estimProbas(attrs)
-        if(dic[0]>=dic[1]):
+        if dic[0]>=dic[1]:
             return 0
         else:
             return 1
